@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_back"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".DevicesActivity2"
+    tools:deviceIds="wear">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/main_color" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_boxedEdges="all">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:text="@string/devices"
+                android:textColor="@color/main_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_device1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/light"
+                android:text="@string/light"
+                android:textAllCaps="false"
+                android:textColor="@color/main_color"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text" />
+
+            <Button
+                android:id="@+id/btn_device2"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/light"
+                android:text="@string/light"
+                android:textAllCaps="false"
+                android:textColor="@color/main_color"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text" />
+
+            <Button
+                android:id="@+id/btn_device3"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/main_color"
+                android:drawableTop="@drawable/thermostat"
+                android:text="@string/thermostat"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_device1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</androidx.wear.widget.BoxInsetLayout>
